@@ -91,3 +91,6 @@ console.log(typeof(age)); // Output is "number" it will return the type of the v
 console.log(typeof(true)) // Output is "boolean" it will return the type of the variable
 console.log(typeof(undefined)); // Output is "undefined" it will return the type of the variable
 console.log(typeof(null)); // Output is "object" it is a bug in JavaScript because null is not an object but it is treated as an object in JavaScript
+
+//Spread Operator
+//Rest parameter
