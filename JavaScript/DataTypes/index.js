@@ -62,3 +62,10 @@ console.log(hi);
 let date=new Date();
 console.log(date);
 console.log(date.getFullYear());
+//Map
+let map=new Map(); // In map we can store key value pairs and the keys can be of any data type and the values can also be of any data type 
+map.set("name","Teja");
+map.set("age",22);
+map.set("hobbies",["coding","gaming"]);
+console.log(typeof(map));
+console.log(map);
