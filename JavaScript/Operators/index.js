@@ -78,3 +78,16 @@ console.log(m >>> 1); // Output is 2 because we are shifting the bits to the rig
 // Ternary Operator
 let age=18;
 age>=18 ? console.log("You are an adult") : console.log("You are a minor"); // Output is "You are an adult" it is shortcut for if else statement if the condition is true it will execute the first statement otherwise it will execute the second statement
+
+// String Operators 
+let str1="Hello";
+let str2="World";
+console.log(str1 + " " + str2); // Output is "Hello World" it is concatenation operator it will concatenate the two strings
+console.log(`${str1} ${str2}`); // Output is "Hello World" it is template literal it will also concatenate the two strings but it is more readable and easier to use than concatenation operator
+
+// Type Operators 
+console.log(typeof(str1)); // Output is "string" it will return the type of the variable 
+console.log(typeof(age)); // Output is "number" it will return the type of the variable
+console.log(typeof(true)) // Output is "boolean" it will return the type of the variable
+console.log(typeof(undefined)); // Output is "undefined" it will return the type of the variable
+console.log(typeof(null)); // Output is "object" it is a bug in JavaScript because null is not an object but it is treated as an object in JavaScript
