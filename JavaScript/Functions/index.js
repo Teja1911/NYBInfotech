@@ -172,3 +172,83 @@ let student1=percentage(80)(100); //  Function currying
 let student2=percentage(75)(100);
 console.log(student1); // Output: 80
 console.log(student2); // Output: 75
+
+// First Class Functions
+// Pure Functions 
+// Impure Functions 
+// Higher Order Functions
+
+// This Keyword in Functions 
+// The this keyword refers to the current object that is executing the current function.
+console.log(this); // In global scope this will refer to the global object (window in browser and global in node.js)
+function hello(){
+    console.log(this); // In a regular function this will refer to the global object (window in browser and global in node.js)
+}
+hello();
+let obj={
+    name:"John",
+    age:30,
+    location:"New York",
+    hello(){
+        console.log(this); // In a method this will refer to the object that is calling the method (obj in this case)
+    },
+    hello1:()=>{
+        console.log(this); // In an arrow function this will refer to the enclosing scope (global object in this case). In arrow function there will no own this it will take from the parent scope(lexical scope) (global object in this case)
+    }
+}
+obj.hello();
+obj.hello1();
+console.log(obj.name); // Output: John
+console.log(obj["name"]); // Output: John
+
+// Changing the reference of this keyword
+// call , apply and bind method
+
+function hello(a,b){
+    console.log(this);
+    console.log(a,b);
+}
+hello.call(obj,10,20); 
+// 1st argument is the object reference 
+// next will be the arguments that we want to pass to the function
+
+//apply
+hello.apply(obj,[10,20]);
+// 1st argument is the object reference 
+// next will be the arguments that we want to pass to the function in the form of an array.
+
+//bind
+hello.bind(obj,10,20)();
+
+let obj1={
+    name:"Alice",
+    age:25,
+    location:"Los Angeles",
+    obj2:{
+        name:"Bob",
+        age:35,
+        location:"Chicago",
+        hello:(a,b)=>{
+            console.log(this); // In an arrow function this will refer to the enclosing scope (global object in this case). In arrow function there will no own this it will take from the parent scope(lexical scope) (global object in this case)
+            console.log(a+b);
+            
+        }
+    }
+}
+
+obj1.obj2.hello.call(obj1.obj2,10,20); 
+obj1.obj2.hello.apply(obj1.obj2,[10,20]);
+obj1.obj2.hello.bind(obj1.obj2,10,20)();
+// Conclusion: It will refers to the global object so it will not change the reference of this keyword in an arrow function using the call , apply and bind method these three will act as same in an arrow function but in a regular function it will change the reference of this keyword using the call, apply and bind method.
+
+//call 
+// Immediately execution
+// when to use call method --> when you know exact arguments that you want to pass to the function. when you want instant execution
+
+//apply
+// Immediately execution
+// when to use apply method --> when you have an array of arguments that you want to pass to the function. Useful with Math.max and Math.min functions
+
+//bind 
+// Not immediately execution 
+// when to use bind method --> when you want to store a function for later use. Used in event handling and callback functions and react/async functions
