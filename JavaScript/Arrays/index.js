@@ -154,3 +154,30 @@ console.log(a.map(a => a-1));
 console.log(a.filter(i => i>4)); //returns the array  
 console.log(a);
 console.log(a.reduce((acc,curr) => acc +  curr, 0)); // Reduces to single array
+
+// Copying of Arrays
+//1. Normal Copy
+//2. Deep Copy
+//3. Shallow Copy
+
+let original=[10,20,30,40,50,[60,70,80,90,100]]
+
+//1. Normal Copy
+let copy=original
+copy[3]=4
+console.log("orginal",original)
+console.log("copy",copy)
+
+//2. Shallow Copy
+let copy1=[...original]
+copy1[0]=1
+// let original=[10,20,30,40,50,[60,70,80,90,100]] 5 index in the outer array and 0 index in the inner array then we can modify the 5 index value
+copy1[5][0]=6 
+console.log("copy",copy1)
+console.log("original",original)
+
+//3. Deep Copy
+let copy2=JSON.parse(JSON.stringify(original))
+copy2[5][0]=60
+console.log(copy2)
+console.log(original)
