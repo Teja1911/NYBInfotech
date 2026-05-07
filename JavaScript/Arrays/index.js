@@ -119,6 +119,7 @@ console.log(arr.every(i => i>2));
 console.log(arr5.join(" "));
 //sort
 let a=[5,19,12,11,3]; // It will take first digit when we take more than one digit it will compare the first digit will be compared with entire elements in the array
+
 console.log(a.sort());
 
 for(let i=0;i<a.length-1;i++){
@@ -148,3 +149,8 @@ for(let i of m){
     }
 }
 console.log(n);
+// Map , Filter and Reduce Methods
+console.log(a.map(a => a-1));
+console.log(a.filter(i => i>4)); //returns the array  
+console.log(a);
+console.log(a.reduce((acc,curr) => acc +  curr, 0)); // Reduces to single array
