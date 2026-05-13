@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"> <!-- External CSS -->
+    <style>
+        #h2{
+            color: blueviolet;
+        }
+        div~h1{
+            /* Key value pairs */
+            color: rgb(0, 0, 0);
+        }
+        h1{
+            color: rgb(219, 21, 71);
+        }
+    </style><!-- Internal CSS -->
+</head>
+<body>
+    <h1 id="h1" style="color: rgb(17, 63, 163); border: 1px black;">This is Inline CSS</h1>
+    <!-- Inline CSS -->
+    <h2 title="This is Hi" id="h2">Style using Internal CSS</h2>
+    <!-- id will be having the high priority than class -->
+    <div class="one">
+        <h1>Hi This is first element</h1>
+        <h1 >This is second element</h1>
+       
+        <section class="a">
+            <h1>This is third element</h1>
+            <div class="z">
+
+            </div>
+            <div class="y">
+
+            </div>
+        </section>
+        <div class="b">
+
+        </div>
+        <div class="c">
+
+        </div>
+    </div>
+    <h1>Hi</h1>
+    <h1>Hello Every One</h1>
+</body>
+</html>
+
+<!-- Internal External Inline -->
+<!-- We Apply styles to an element -->
+<!-- Tag + attributes + content = element -->
+<!-- Tag Name -->
+<!-- Id Name -->
+<!-- Class Name -->
+<!-- Universal Selector * -->
+<!-- Combinator Selector parent child for all children's it is applying --> 
+<!-- If we add the greater than symbol i.e div>hi it will apply to the direct elements not in the children elements --> 
+<!-- If we add the element + element (i.e div + h1 it will style next element sibling which arrive first) -->
+<!-- If we use the ~ symbol it will style all the siblings -->

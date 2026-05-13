@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+*{
+    text-align: center;
+}
+h1{
+    background-color: blueviolet;
+}
+h1{
+    text-transform: capitalize;
+    color: rgb(39, 215, 238);
+}
