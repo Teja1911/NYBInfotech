@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainbox{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;/* it will move from the top center bottom like inside the box vertically it will move*/
+            flex-direction: row;/*it will move from the left center right like inside the box horizontally it will move*/
+        }
+        .main{
+            box-sizing: border-box;
+        }
+        #pos{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainbox">
+        <button class="box">One</button>
+        <button class="box">Two</button>
+        <button class="box">Three</button>
+        <p style="background-color: blueviolet;">Four</p>
+        <h1 style="background-color: brown;">Five</h1>
+    </div>
+    <div id="pos">
+        
+        <p style="background-color: blue; width: 25%; padding-left:5% ;margin-right: 5px;">Hi</p>
+        <p style="background-color: blueviolet;width: 65%;text-align: end; padding-right: 20%; margin-left: 5px;">Hello</p>
+    </div>
+    
+    <!-- Layout 2-> Flex Grid -->
+    <!-- Direction Main Axis      Cross Axis
+        Row        left->right   top->bottom
+        col        top->bottom   left->right -->
+</body>
+</html>
