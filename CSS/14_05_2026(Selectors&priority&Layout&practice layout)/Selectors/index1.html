@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{
+            color: rebeccapurple;
+        }
+        #box1{
+            box-sizing: border-box;
+            background: rebeccapurple;
+            min-width: 50%;
+            min-height: 50%;
+            border: 2px solid black;
+            padding: 5px;
+            /* margin: 5px 0px 10px 10px;  (Top Right Bottom Left) */
+        }
+        #box2{
+            box-sizing: content-box;
+            background: #d36c6c;
+            min-width: 50%;
+            min-height: 50%;
+            border: 2px solid black;
+            padding: 5px;
+
+        }
+         #box12{
+            box-sizing: content-box;
+            background: #d36c6c;
+            min-width: 50%;
+            min-height: 50%;
+            border: 2px solid black;
+            /* padding: 5px; */
+
+        }
+        div{
+            display: flex;/* it will appear in row */
+            align-items: center;
+            justify-content:space-between;/*it will make content positioning like from starting or center or end  */
+            text-align: center;
+        }
+        #div{
+            display: grid;
+            justify-content: center;
+            align-items:center;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <p id="one" style="color: blueviolet; font-style: italic;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eos?</p>
+    <p style="background-color: blueviolet; width: 21%;">Lorem, ipsum dolor.</p></div>
+    
+    <div id="div"><p style="background-color: blueviolet;  border: 2px solid black; padding: 5px; ">Lorem, ipsum dolor.</p>
+    <p>Lorem ipsum dolor sit amet.</p></div>
+    <h1 id="box1">Border Box</h1>
+    <h1 id="box2">Content Box</h1>
+    <h1 id="box12">Content Box</h1>
+    
+</body>
+</html>  
