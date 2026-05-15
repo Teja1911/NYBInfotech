@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 
+            50px
+            30px
+            100px
+            300px
+            30px;
+            gap: 5px 20px;
+        }
+        #logo{
+            background-color: blueviolet;
+            grid-column: 1/-1;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            font-size: larger;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #navigation{
+            grid-column: 1/-1;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #header{
+            grid-column: 1/-1;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #sidebar{
+            grid-column: 1/1;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #bodyarea{
+            grid-column: 2/-1;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #footer{
+            grid-column: 1/-1;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="logo">Logo</div>
+        <div id="navigation">Navigation</div>
+        <div id="header">Header / Banner</div>
+        <div id="sidebar">Side Bar</div>
+        <div id="bodyarea">Body Area</div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>
